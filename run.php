@@ -7,14 +7,12 @@ passthru("sudo ./firewall.php");
 passthru('./repo.php');
 
 while(1){
-	echo("Type 'run' to start\n");
+	echo("Type 'run' to start logging\n");
 	$input = readline();
 	if ($input == "run"){
 		break;
 	}
 }
-
-passthru('./repo/autorun*');
 
 echo "Starting logging";
 system('screen -d -m -L -Logfile ./git.log ./log.php');
