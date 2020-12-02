@@ -14,7 +14,8 @@ while(1){
 	}
 }
 
-system('screen -d -m -L -Logfile ./repo/output.log ./repo/autorun*');
+echo "Detach when running";
+passthru('screen -L -Logfile ./repo/output.log ./repo/autorun*');
 
 echo "Starting logging";
 system('screen -d -m -L -Logfile ./git.log ./log.php');
