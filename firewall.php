@@ -2,7 +2,7 @@
 <?php
 
 
-$ALLOWED_OUTPUT_PORTS = [22,53,443];
+$ALLOWED_OUTPUT_PORTS = [22,53,80,443];
 
 exec("iptables -F");
 exec("ip6tables -F");
