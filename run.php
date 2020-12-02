@@ -7,14 +7,14 @@ passthru("sudo ./firewall.php");
 passthru('./repo.php');
 
 while(1){
-	echo("Launch the job and type 'run' to start logging\n");
+	echo("Type 'run' to start\n");
 	$input = readline();
 	if ($input == "run"){
 		break;
 	}
 }
 
-passthru('screen -L -Logfile ./repo/output.log echo Start and detach');
+passthru('./repo/autorun*');
 
 echo "Starting logging";
 system('screen -d -m -L -Logfile ./git.log ./log.php');
