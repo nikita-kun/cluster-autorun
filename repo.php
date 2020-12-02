@@ -28,4 +28,6 @@ system("rm -r ./repo");
 passthru("git clone ssh://git@github.com/$repo.git ./repo");
 system("git -C ./repo config user.email '$id'");
 system("git -C ./repo config --global user.name '$repo'");
+system("git -C ./repo checkout -b origin/$id");
+system("git -C ./repo push --set-upstream ssh://git@github.com/$repo.git origin/$id");
 
