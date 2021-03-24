@@ -4,7 +4,7 @@
 
 echo "Generating the public key\n";
 
-echo "Enter an identity (e.g. an email)\n";
+echo "Enter a UNIQUE identity (e.g. an email)\n";
 $id = readline();
 echo "$id\n";
 
